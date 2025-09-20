@@ -145,8 +145,8 @@ const Landing = () => {
   }
 
   return (
-    <div className="min-h-screen text-gray-900 dark:text-gray-100 bg-gradient-to-b from-fuchsia-200 via-sky-100 to-emerald-100 dark:from-[#09090b] dark:via-[#0f0f13] dark:to-black">
-      {/* Floating Controls */}
+    <div className=" text-gray-900 dark:text-gray-100 bg-gradient-to-b from-fuchsia-200 via-sky-100 to-emerald-100 dark:from-[#09090b] dark:via-[#0f0f13] dark:to-black">
+      {/* Floating Controls min-h-screen*/}
       <div className="fixed top-4 right-4 z-50 flex items-center gap-3">
         <a
           href="#contact"
