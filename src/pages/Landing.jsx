@@ -169,13 +169,13 @@ const Landing = () => {
               />
             </div>
             <div>
-              <h1 className="sm:text-lg text-4xl font-semibold">Rielshotit</h1>
-              <p className="sm:text-sm text-2xl text-zinc-700 dark:text-zinc-300">
+              <h1 className="sm:text-lg text-8xl font-semibold">Rielshotit</h1>
+              <p className="sm:text-sm text-6xl text-zinc-700 dark:text-zinc-300">
                 Photographer • Videographer
               </p>
             </div>
           </div>
-          <ul className="hidden md:flex items-center gap-6 text-sm">
+          <ul className="hidden md:flex items-center gap-6 sm:text-sm text-6xl">
             <li>
               <a href="#home" className="hover:text-[#1a06f8]">
                 Home
@@ -215,7 +215,7 @@ const Landing = () => {
                   Rielshotit
                 </span>
               </h2>
-              <p className="mt-3 text-3xl md:text-lg text-zinc-800 dark:text-zinc-300">
+              <p className="mt-3 text-5xl md:text-lg text-zinc-800 dark:text-zinc-300">
                 A young creator navigating the world of photography with a
                 simple belief. "The best photos aren’t staged they’re lived". My
                 work is about capturing people as they are—natural, confident,
@@ -228,18 +228,18 @@ const Landing = () => {
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
                   href="#projects"
-                  className="px-4 py-2 rounded-xl text-3xl sm:text-sm text-white bg-gradient-to-r from-fuchsia-600 via-indigo-600 to-sky-600 shadow"
+                  className="px-4 py-2 rounded-xl text-5xl sm:text-sm text-white bg-gradient-to-r from-fuchsia-600 via-indigo-600 to-sky-600 shadow"
                 >
                   View work
                 </a>
                 <a
                   href="#contact"
-                  className="px-4 py-2 rounded-xl  text-3xl sm:text-sm border border-zinc-300 dark:border-zinc-700"
+                  className="px-4 py-2 rounded-xl  text-5xl sm:text-sm border border-zinc-300 dark:border-zinc-700"
                 >
                   Book a shoot
                 </a>
               </div>
-              <div className="mt-6 flex flex-wrap gap-2 text-2xl sm:text-sm">
+              <div className="mt-6 flex flex-wrap gap-2 text-4xl sm:text-sm">
                 <span className="px-2 py-1 rounded bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-900/40 dark:text-fuchsia-200">
                   Portraits
                 </span>
@@ -267,7 +267,6 @@ const Landing = () => {
             textColor="#ffffff"
             borderRadius={0.05}
             scrollEase={0.02}
-      
           />
         </div>
 
@@ -276,33 +275,33 @@ const Landing = () => {
           id="about"
           className="bg-white/70 dark:bg-zinc-900/50 rounded-3xl border border-black/5 dark:border-white/10 p-6"
         >
-          <h3 className="text-4xl sm:text-xl font-bold">About</h3>
-          <p className="text-3xl sm:text-xl mt-3 text-zinc-700 dark:text-zinc-300">
+          <h3 className="text-7xl sm:text-xl font-bold">About</h3>
+          <p className="text-5xl sm:text-xl mt-3 text-zinc-700 dark:text-zinc-300">
             I’m a Lagos-based photographer and videographer focusing on
             portraits, events, and brand storytelling...
           </p>
           <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm">
             <div>
-              <div className="sm:text-xs text-3xl font-semibold">Skills</div>
-              <div className="sm:text-xs text-2xl text-zinc-600 dark:text-zinc-300">
+              <div className="sm:text-xs text-6xl font-semibold">Skills</div>
+              <div className="sm:text-xs text-4xl text-zinc-600 dark:text-zinc-300">
                 Portraiture, lighting, storyboarding
               </div>
             </div>
             <div>
-              <div className="sm:text-xs text-3xl font-semibold">Gear</div>
-              <div className="sm:text-xs text-2xl text-zinc-600 dark:text-zinc-300">
+              <div className="sm:text-xs text-6xl font-semibold">Gear</div>
+              <div className="sm:text-xs text-4xl text-zinc-600 dark:text-zinc-300">
                 Sony FX3/A7 series, 24-70mm, 85mm, gimbal
               </div>
             </div>
             <div>
-              <div className="sm:text-xs text-3xl font-semibold">Editing</div>
-              <div className="sm:text-xs text-2xl text-zinc-600 dark:text-zinc-300">
+              <div className="sm:text-xs text-6xl font-semibold">Editing</div>
+              <div className="sm:text-xs text-4xl text-zinc-600 dark:text-zinc-300">
                 Lightroom, Photoshop, DaVinci Resolve
               </div>
             </div>
             <div>
-              <div className="sm:text-xs text-3xl font-semibold">Delivery</div>
-              <div className="sm:text-xs text-2xl text-zinc-600 dark:text-zinc-300">
+              <div className="sm:text-xs text-6xl font-semibold">Delivery</div>
+              <div className="sm:text-xs text-4xl text-zinc-600 dark:text-zinc-300">
                 Social cuts, 4K masters, galleries
               </div>
             </div>
@@ -312,8 +311,10 @@ const Landing = () => {
         {/* Projects */}
         <section id="projects" className="space-y-4">
           <div className="flex items-end justify-between gap-4">
-            <h3 className="sm:text-xl text-2xl font-bold">Brand Shoots</h3>
-            <span className="sm:text-xs text-2xl text-zinc-500">Auto-scroll →</span>
+            <h3 className="sm:text-xl text-5xl font-bold">Brand Shoots</h3>
+            <span className="sm:text-xs text-5xl text-zinc-500">
+              Auto-scroll →
+            </span>
           </div>
           <div className="relative overflow-hidden">
             <div className="projects-scroll-x flex">
@@ -333,7 +334,7 @@ const Landing = () => {
                   </div>
                   <div className="p-4 flex flex-col flex-grow">
                     <h4 className="font-semibold text-lg">{p.title}</h4>
-                    <p className="mt-1 sm:text-sm text-3xl text-zinc-700 dark:text-zinc-300">
+                    <p className="mt-1 sm:text-sm text-5xl text-zinc-700 dark:text-zinc-300">
                       {p.desc}
                     </p>
                     <div className="mt-3">
@@ -359,8 +360,8 @@ const Landing = () => {
           id="contact"
           className="bg-white dark:bg-gray-900/40 p-6 rounded-2xl border border-gray-100 dark:border-gray-800"
         >
-          <h3 className="sm:text-xl text-4xl font-bold">Contact</h3>
-          <p className="mt-2 sm:text-sm text-3xl text-gray-600 dark:text-gray-300">
+          <h3 className="sm:text-xl text-7xl font-bold">Contact</h3>
+          <p className="mt-2 sm:text-sm text-6xl text-gray-600 dark:text-gray-300">
             Want to collaborate or hire me? Send a message below.
           </p>
 
@@ -374,7 +375,7 @@ const Landing = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="Name"
-              className="text-3xl sm:text-sm p-3 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30"
+              className="text-5xl sm:text-sm p-3 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30"
             />
             <input
               required
@@ -383,7 +384,7 @@ const Landing = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="Email"
-              className="text-3xl sm:text-sm p-3 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30"
+              className="text-5xl sm:text-sm p-3 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30"
             />
             <textarea
               required
@@ -392,10 +393,10 @@ const Landing = () => {
               onChange={handleChange}
               placeholder="Message"
               rows={5}
-              className="text-3xl sm:text-sm sm:col-span-2 p-3 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30"
+              className="text-5xl sm:text-sm sm:col-span-2 p-3 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30"
             />
 
-            <div className="text-3xl sm:text-sm sm:col-span-2 flex items-center justify-between">
+            <div className="text-5xl sm:text-sm sm:col-span-2 flex items-center justify-between">
               <div className="flex gap-3">
                 <a
                   href="https://www.instagram.com/rielshotit"
@@ -429,7 +430,7 @@ const Landing = () => {
       </main>
 
       {/* Footer */}
-      <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-10 text-center text-sm text-zinc-600 dark:text-zinc-400">
+      <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-10 text-center sm:text-sm text-5xl text-zinc-600 dark:text-zinc-400">
         © {new Date().getFullYear()} Rielshotit • Crafted with care. All rights
         reserved.
       </footer>
