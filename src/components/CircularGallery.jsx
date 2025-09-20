@@ -169,13 +169,14 @@ class Media {
     this.textColor = textColor;
     this.borderRadius = borderRadius;
     this.font = font;
+    this.imageLoaded = false;
     this.createShader();
     this.createMesh();
     this.createTitle();
     this.onResize();
   }
   createShader() {
-    const texture = new Texture(this.gl, {
+    this.texture = new Texture(this.gl, {
       generateMipmaps: true,
     });
     this.program = new Program(this.gl, {
@@ -231,7 +232,7 @@ class Media {
         }
       `,
       uniforms: {
-        tMap: { value: texture },
+        tMap: { value: this.texture },
         uPlaneSizes: { value: [0, 0] },
         uImageSizes: { value: [0, 0] },
         uSpeed: { value: 0 },
@@ -240,16 +241,24 @@ class Media {
       },
       transparent: true,
     });
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.src = this.image;
-    img.onload = () => {
-      texture.image = img;
-      this.program.uniforms.uImageSizes.value = [
-        img.naturalWidth,
-        img.naturalHeight,
-      ];
-    };
+    // Do not load the image here!
+  }
+  loadImageIfNeeded(x, H) {
+    if (this.imageLoaded) return;
+    // Only load if near the viewport (within 1.2x half width)
+    if (Math.abs(x) < H * 1.2) {
+      const img = new window.Image();
+      img.crossOrigin = "anonymous";
+      img.src = this.image;
+      img.onload = () => {
+        this.texture.image = img;
+        this.program.uniforms.uImageSizes.value = [
+          img.naturalWidth,
+          img.naturalHeight,
+        ];
+      };
+      this.imageLoaded = true;
+    }
   }
   createMesh() {
     this.plane = new Mesh(this.gl, {
@@ -270,9 +279,11 @@ class Media {
   }
   update(scroll, direction) {
     this.plane.position.x = this.x - scroll.current - this.extra;
-
     const x = this.plane.position.x;
     const H = this.viewport.width / 2;
+
+    // Lazy load image if near viewport
+    this.loadImageIfNeeded(x, H);
 
     if (this.bend === 0) {
       this.plane.position.y = 0;
@@ -320,11 +331,15 @@ class Media {
         ];
       }
     }
+    // Detect mobile and adjust scale
+    const isMobile = this.screen.width < 768;
     this.scale = this.screen.height / 1500;
+    const yFactor = isMobile ? 1.6 : 1; // Increase for mobile
+    const xFactor = isMobile ? 1.6 : 1; // Increase for mobile
     this.plane.scale.y =
-      (this.viewport.height * (900 * this.scale)) / this.screen.height;
+      (this.viewport.height * (900 * this.scale) * yFactor) / this.screen.height;
     this.plane.scale.x =
-      (this.viewport.width * (700 * this.scale)) / this.screen.width;
+      (this.viewport.width * (700 * this.scale) * xFactor) / this.screen.width;
     this.plane.program.uniforms.uPlaneSizes.value = [
       this.plane.scale.x,
       this.plane.scale.y,

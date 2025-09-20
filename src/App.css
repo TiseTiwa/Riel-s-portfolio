@@ -33,20 +33,22 @@ body {
 }
 
 .typing-text {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: bold;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid #7600d7;
-  animation: typing 4s steps(6) infinite, blink 2s step-start infinite alternate;
+  animation: typing 4s steps(24) infinite, blink 4s step-start infinite alternate;
 }
+
+
 
 @keyframes typing {
   0% {
     width: 0;
   }
   50% {
-    width: 30%;
+    width: 35%;
   }
   100% {
     width: 0;
@@ -117,6 +119,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
 }
 
 .circular-gallery {
@@ -130,19 +133,3 @@ body {
   cursor: grabbing;
 }
 
-/* <a
-        href="https://www.instagram.com/rielshotit"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:underline"
-      >
-        Instagram
-      </a>
-      <a
-        href="https://www.tiktok.com/@rielshotit"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:underline"
-      >
-        TikTok
-      </a> */

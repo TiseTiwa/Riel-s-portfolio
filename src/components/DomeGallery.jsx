@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useCallback } from "react";
+import { useEffect, useMemo, useRef, useCallback, lazy } from "react";
 import { useGesture } from "@use-gesture/react";
 import tidydetox4 from "../assets/tidydetox4.jpg";
 import tidydetox5 from "../assets/tidydetox5.jpg";
@@ -24,20 +24,19 @@ import concert7 from "../assets/concert7.jpg";
 import concert8 from "../assets/concert8.jpg";
 import concert9 from "../assets/concert9.jpg";
 import concert10 from "../assets/concert10.jpg";
-import ayy1 from "../assets/ayy1.jpg"
-import ayy2 from "../assets/ayy2.jpg"
-import ayy3 from "../assets/ayy3.jpg"
-import ayy4 from "../assets/ayy4.jpg"
-import ayy5 from "../assets/ayy5.jpg"
-import ayy6 from "../assets/ayy6.jpg"
-import ayy7 from "../assets/ayy7.jpg"
-import ayy8 from "../assets/ayy8.jpg"
-import ayy9 from "../assets/ayy9.jpg"
-import ayy10 from "../assets/ayy10.jpg"
-import ayy11 from "../assets/ayy11.jpg"
-import ayy12 from "../assets/ayy12.jpg"
-import ayy13 from "../assets/ayy13.jpg"
-
+import ayy1 from "../assets/ayy1.jpg";
+import ayy2 from "../assets/ayy2.jpg";
+import ayy3 from "../assets/ayy3.jpg";
+import ayy4 from "../assets/ayy4.jpg";
+import ayy5 from "../assets/ayy5.jpg";
+import ayy6 from "../assets/ayy6.jpg";
+import ayy7 from "../assets/ayy7.jpg";
+import ayy8 from "../assets/ayy8.jpg";
+import ayy9 from "../assets/ayy9.jpg";
+import ayy10 from "../assets/ayy10.jpg";
+import ayy11 from "../assets/ayy11.jpg";
+import ayy12 from "../assets/ayy12.jpg";
+import ayy13 from "../assets/ayy13.jpg";
 
 const DEFAULT_IMAGES = [
   {
@@ -787,6 +786,7 @@ export default function DomeGallery({
     const img = document.createElement("img");
     img.src = rawSrc;
     img.alt = rawAlt;
+    img.loading = "lazy"; // <-- Add this line
     img.style.width = "100%";
     img.style.height = "100%";
     img.style.objectFit = "cover";
@@ -1014,6 +1014,7 @@ export default function DomeGallery({
                       src={it.src}
                       draggable={false}
                       alt={it.alt}
+                      loading="lazy"
                       className="w-full h-full object-cover pointer-events-none"
                       style={{
                         backfaceVisibility: "hidden",
