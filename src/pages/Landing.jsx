@@ -218,7 +218,7 @@ const Landing = () => {
                   </span>
                 </h2>
               </div>
-              <p className="sm:mt-3 sm:text-xl text-[14px] sm:w-[700px] w-[339px] mt-[-10px] sm:ml-0 ml-[-17px] text-zinc-800 dark:text-zinc-300">
+              <p className="sm:mt-3 sm:text-xl text-[13px] sm:w-[700px] w-[329px] mt-[-10px] sm:ml-0 ml-[-20px] text-zinc-800 dark:text-zinc-300">
                 A young creator navigating the world of photography
               </p>
               <div className=" mt-[10px] sm:mt-[180px]  flex flex-wrap gap-3 sm:ml-0 ml-[-20px]">
