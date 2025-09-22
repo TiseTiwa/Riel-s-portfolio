@@ -170,7 +170,7 @@ const Landing = () => {
             </div>
             <div>
               <h1 className="sm:text-lg text-14xl font-semibold">Rielshotit</h1>
-              <p className="sm:text-sm text-12xl text-zinc-700 dark:text-zinc-300">
+              <p className="sm:text-sm text-[300px] md:text-[200px] text-zinc-700 dark:text-zinc-300">
                 Photographer • Videographer
               </p>
             </div>
