@@ -159,8 +159,8 @@ const Landing = () => {
       {/* Header */}
       <header className="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-8">
         <nav className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-11 h-full rounded-2xl overflow-hidden shadow">
+          <div className="flex mt-[-45px]  sm:mt-0 items-center gap-3">
+            <div className="w-11 h-full  rounded-2xl overflow-hidden shadow">
               <img
                 src={headshot}
                 alt=""
@@ -201,45 +201,41 @@ const Landing = () => {
 
         {/* Hero */}
         <section id="home" className="mt-12">
-          <div className="introdiv flex flex-col md:flex-row overflow-hidden rounded-2xl border border-white/40 dark:border-white/10 shadow-xl">
+          <div className="introdiv mt-[-5px] sm:mt-0 sm:w-[1000px] mx-auto flex flex-col md:flex-row overflow-hidden rounded-2xl border border-white/40 dark:border-white/10 shadow-xl">
             <img
               src={headshot}
               alt="Hero sample"
-              className="w-full md:w-1/2 h-[950px] sm:h-[400px] object-cover"
+              className="sm:w-full mx-[5px] md:w-1/2 h-[280px] mt-[40px] w-[290px] sm:mt-0  sm:h-[350px] object-cover"
               loading="lazy"
             />
-            <div className="p-6 flex flex-col justify-center">
-              <h2 className="typing-text text-5xl sm:text-3xl md:text-4xl font-extrabold leading-tight">
-                Hi, I'm{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#110343] via-indigo-600 to-sky-600">
-                  Rielshotit
-                </span>
-              </h2>
-              <p className="mt-3 text-13xl md:text-lg text-zinc-800 dark:text-zinc-300">
-                A young creator navigating the world of photography with a
-                simple belief. "The best photos aren’t staged they’re lived". My
-                work is about capturing people as they are—natural, confident,
-                and full of life. Whether it’s individual portraits, group
-                sessions, lifestyle shoots, or corporate moments, I focus on
-                making every client feel seen, celebrated, and proud of their
-                story. For me, every shoot is more than just a session—it’s an
-                experience. And through it all, I’m proud to create.
+            <div className="p-6 flex sm:mt-[-30px] flex-col justify-center">
+              <div>
+                {" "}
+                <h2 className="typing-text text-5xl sm:mt-0 mt-[-10px] sm:text-3xl md:text-4xl font-extrabold leading-tight">
+                  Hi, I'm{" "}
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#110343] via-indigo-600 to-sky-600">
+                    Rielshotit
+                  </span>
+                </h2>
+              </div>
+              <p className="sm:mt-3 sm:text-xl text-[14px] sm:w-[700px] w-[339px] mt-[-10px] sm:ml-0 ml-[-17px] text-zinc-800 dark:text-zinc-300">
+                A young creator navigating the world of photography
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className=" mt-[10px] sm:mt-[180px]  flex flex-wrap gap-3 sm:ml-0 ml-[-20px]">
                 <a
                   href="#projects"
-                  className="px-4 py-2 rounded-xl text-13xl sm:text-sm text-white bg-gradient-to-r from-fuchsia-600 via-indigo-600 to-sky-600 shadow"
+                  className="sm:px-4 sm:py-2 px-2  py-1 h-[30px] sm:h-[35px] rounded-xl  text-[14px] sm:text-sm text-white bg-gradient-to-r from-fuchsia-600 via-indigo-600 to-sky-600 shadow"
                 >
                   View work
                 </a>
                 <a
                   href="#contact"
-                  className="px-4 py-2 rounded-xl  text-13xl sm:text-sm border border-zinc-300 dark:border-zinc-700"
+                  className="sm:px-4 sm:py-2 px-2  py-1 h-[35px] sm:h-[35px] rounded-xl  text-13xl sm:text-sm border border-zinc-300 dark:border-zinc-700"
                 >
                   Book a shoot
                 </a>
               </div>
-              <div className="mt-6 flex flex-wrap gap-2 text-10xl sm:text-sm">
+              <div className="mt-6 flex flex-wrap gap-2 ml-[-20px] sm:ml-0 text-[12px] sm:text-sm">
                 <span className="px-2 py-1 rounded bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-900/40 dark:text-fuchsia-200">
                   Portraits
                 </span>
@@ -277,8 +273,14 @@ const Landing = () => {
         >
           <h3 className="text-14xl sm:text-xl font-bold">About</h3>
           <p className="text-13xl sm:text-xl mt-3 text-zinc-700 dark:text-zinc-300">
-            I’m a Lagos-based photographer and videographer focusing on
-            portraits, events, and brand storytelling...
+             A young creator navigating the world of photography with a
+                simple belief. "The best photos aren’t staged they’re lived". My
+                work is about capturing people as they are natural, confident,
+                and full of life. Whether it’s individual portraits, group
+                sessions, lifestyle shoots, or corporate moments, I focus on
+                making every client feel seen, celebrated, and proud of their
+                story. For me, every shoot is more than just a session it’s an
+                experience. And through it all, I’m proud to create.
           </p>
           <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm">
             <div>
@@ -311,8 +313,8 @@ const Landing = () => {
         {/* Projects */}
         <section id="projects" className="space-y-4">
           <div className="flex items-end justify-between gap-4">
-            <h3 className="sm:text-xl text-12xl font-bold">Brand Shoots</h3>
-            <span className="sm:text-xs text-9xl text-zinc-500">
+            <h3 className="sm:text-xl text-[12px] font-bold">Brand Shoots</h3>
+            <span className="sm:text-xs text-[]12px] text-zinc-500">
               Auto-scroll →
             </span>
           </div>
@@ -334,7 +336,7 @@ const Landing = () => {
                   </div>
                   <div className="p-4 flex flex-col flex-grow">
                     <h4 className="font-semibold text-lg">{p.title}</h4>
-                    <p className="mt-1 sm:text-sm text-9xl text-zinc-700 dark:text-zinc-300">
+                    <p className="mt-1 sm:text-sm text-[12px] text-zinc-700 dark:text-zinc-300">
                       {p.desc}
                     </p>
                     <div className="mt-3">
@@ -361,7 +363,7 @@ const Landing = () => {
           className="bg-white dark:bg-gray-900/40 p-6 rounded-2xl border border-gray-100 dark:border-gray-800"
         >
           <h3 className="sm:text-xl text-14xl font-bold">Contact</h3>
-          <p className="mt-2 sm:text-sm text-12xl text-gray-600 dark:text-gray-300">
+          <p className="mt-2 sm:text-sm text-[12px] text-gray-600 dark:text-gray-300">
             Want to collaborate or hire me? Send a message below.
           </p>
 
@@ -396,7 +398,7 @@ const Landing = () => {
               className="text-12xl sm:text-sm sm:col-span-2 p-3 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30"
             />
 
-            <div className="text-10xl sm:text-sm sm:col-span-2 flex items-center justify-between">
+            <div className=" sm:text-sm sm:col-span-2 flex items-center justify-between">
               <div className="flex gap-3">
                 <a
                   href="https://www.instagram.com/rielshotit"
@@ -430,7 +432,7 @@ const Landing = () => {
       </main>
 
       {/* Footer */}
-      <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-10 text-center sm:text-sm text-8xl text-zinc-600 dark:text-zinc-400">
+      <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-10 text-center sm:text-sm text-[10px] text-zinc-600 dark:text-zinc-400">
         © {new Date().getFullYear()} Rielshotit • Crafted with care. All rights
         reserved.
       </footer>
